@@ -1,0 +1,31 @@
+version: "3"
+services:
+  api-gateway:
+    container_name: api-gateway
+    build:
+      context: "."
+      dockerfile: "./api-gateway/Dockerfile"
+    depends_on:
+      - service-one
+      - service-two
+    environment:
+      - SERVICE_ONE_URI=http://service-one:8081
+      - SERVICE_TWO_URI=http://service-two:8082
+    ports:
+      - "8080:8080"
+
+  service-one:
+    container_name: service-one
+    build:
+      context: "."
+      dockerfile: "./service-one/Dockerfile"
+    ports:
+      - "8081:8081"
+
+  service-two:
+    container_name: service-two
+    build:
+      context: "."
+      dockerfile: "./service-two/Dockerfile"
+    ports:
+      - "8082:8082"
