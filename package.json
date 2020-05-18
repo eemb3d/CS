@@ -1,0 +1,22 @@
+{
+  "name": "cs",
+  "version": "1.0.0",
+  "description": "Technical Exercise",
+  "scripts": {
+    "installall": "(cd api-gateway && npm install); (cd service-one && npm install); (cd service-two && npm install)",
+    "cpenv": "(cd api-gateway && cp .env.example .env); (cd service-one && cp .env.example .env); (cd service-two && cp .env.example .env)",
+    "start": "docker-compose up",
+    "test": "(cd api-gateway && npm run test); (cd service-one && npm run test); (cd service-two && npm run test)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eemb3d/CS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eemb3d/CS/issues"
+  },
+  "homepage": "https://github.com/eemb3d/CS#readme"
+}

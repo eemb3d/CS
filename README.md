@@ -81,14 +81,17 @@ Retrieve data about games.
 # Download the project 
 git clone https://github.com/eemb3d/CS.git .
 
-# Modify .env in each directory
-mv .env.example .env
+# Modify .env
+npm run cpenv
 
-# Install dependencies in each directory
-npm install
+# Install dependencies
+npm run installall
 
-# In the main directory
-docker-compose up
+# Start the Microservices
+npm run start
+
+# In another directory 
+npm run test
 
 ```
 
