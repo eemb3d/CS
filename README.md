@@ -1,6 +1,4 @@
-# Technical Exercise
-Technical Exercise for the role of Software Developer - Companies House 
-Keyargs:
+# Technical 
  - Node.js
  - REST APIs
  - Docker (and Docker Compose)
